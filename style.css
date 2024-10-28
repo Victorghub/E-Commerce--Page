@@ -5,6 +5,23 @@
     font-family: "Roboto", sans-serif;
 }
 
+/*Reusable Codes*/
+.purple__text {
+    color: #7A1CAC;
+}
+
+.h1__Ireland--text {
+    font-size: 45px;
+}
+
+img {
+    width: 100%; /*This puts all images to be 100% of their parent, gives them their width and height*/
+}
+
+/**/
+
+/*NAVIGATION SECTION*/
+
 nav {
     height: 80px;
     display: flex;
@@ -13,35 +30,68 @@ nav {
 .nav__container {
     width: 100%;
     max-width: 1200px;
-    padding: 0 24px;
-    display: flex;
+    padding: 0 24px; /*stops the nav from touching the sides*/
+    display: flex; /*allows for the next two settings to take place*/
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto; /*centers container*/
 }
 
 .logo {
-    width: 160px;
+    width: 160px; /*logo width*/
 }
 
 ul {
-    display: flex;
+    display: flex; /*puts lists side by side, parent of li*/
 }
 
 li {
-    list-style-type: none;
+    list-style-type: none; /*removes bullet points from the list*/
 }
 
 .nav__link {
-    margin-left: 15px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #640D5F;
+    margin-left: 15px; /*creates space between links*/
+    text-decoration: none; /*removes underline*/
+    font-size: 20px; 
+    color: #7A1CAC;
     font-weight: bold;
-    padding: 8px;
+    padding: 8px; /*creates extra space, this is mostly because we add a button, if we remove this the border of "books" will be touching with the letter B and S*/
+}
+
+.nav__link:hover {
+    text-decoration: underline;
 }
 
 .nav__link--books {
-    border: 2px solid #640D5F;
-    border-radius: 4px;
+    border: 2px solid #7A1CAC;
+    border-radius: 4px; /*rounds corners*/
+}
+
+.nav__link--books:hover {
+    text-decoration: none;
+}
+
+#nav__bar-top--background {
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+/*HEADER SECTION*/
+
+header {
+    height: calc(100vh - 80px); /*This fills up the rest of the page from the background-color off #nav__bar-top--background*/
+}
+
+.header__container { /*This maxes width to 100% on the container that holds the text together, its the parent*/
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto; /*centers container*/
+    height: 100%;  /*↓*/
+    display: flex; /*These 3, height, DF, FDC, allows the image to sit nicely in the landing page - it works because Figure and IMG is INSIDE the header.*/
+    flex-direction: column; /*↑*/
+}
+
+h1 {
+    font-size: 56px; /*Makes text bigger*/
+    margin-bottom: 24px; /*Creates space between h1+h2*/
+    text-align: center; /*Center text in the middle*/
 }
