@@ -5,6 +5,26 @@
     font-family: "Roboto", sans-serif;
 }
 
+/*REUSABLE CODES*/
+.purple__text {
+    color: #7A1CAC;
+}
+
+.h1__Ireland--text {
+    font-size: 45px;
+}
+
+img {
+    width: 100%; /*This puts all images to be 100% of their parent, gives them their width and height*/
+    height: 100%; /*makes the height 100% of its relative parent*/
+    max-height: 50vh; /*caps the height to 50% of its height of its relative parent*/
+    padding: 20px; /*padding top and bottom*/
+}
+
+/**/
+
+/*NAVIGATION SECTION*/
+
 nav {
     height: 80px;
     display: flex;
@@ -13,15 +33,127 @@ nav {
 .nav__container {
     width: 100%;
     max-width: 1200px;
-    display: flex;
+    padding: 0 24px; /*stops the nav from touching the sides*/
+    display: flex; /*allows for the next two settings to take place*/
+    align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto; /*centers container*/
+}
+
+.logo {
+    width: 160px; /*logo width*/
 }
 
 ul {
-    display: flex;
+    display: flex; /*puts lists side by side, parent of li*/
 }
 
 li {
-    list-style-type: none;
+    list-style-type: none; /*removes bullet points from the list*/
+}
+
+.nav__link {
+    margin-left: 15px; /*creates space between links*/
+    text-decoration: none; /*removes underline*/
+    font-size: 20px; 
+    color: #7A1CAC;
+    font-weight: bold;
+    padding: 8px; /*creates extra space, this is mostly because we add a button, if we remove this the border of "books" will be touching with the letter B and S*/
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--books {
+    border: 2px solid #7A1CAC;
+    border-radius: 4px; /*rounds corners*/
+}
+
+.nav__link--books:hover {
+    text-decoration: none;
+}
+
+#nav__bar-top--background {
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+/*HEADER SECTION*/
+
+header {
+    height: calc(100vh - 80px); /*This fills up the rest of the page from the background-color off #nav__bar-top--background*/
+}
+
+.header__container { /*This maxes width to 100% on the container that holds the text together, its the parent*/
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto; /*centers container*/
+    height: 100%;  /*↓*/
+    display: flex; /*These 3, height, DF, FDC, allows the image to sit nicely in the landing page - it works because Figure and IMG is INSIDE the header.*/
+    flex-direction: column; /*↑*/
+    justify-content: space-around; /*this brings  the image straight to the bottom due to flex direction being column*/
+    padding-top: 24px;
+}
+
+.header__description { /*parent of button*/
+    display: flex; /*puts buttonside by side*/
+    flex-direction: column; /*puts it below the h1 and h2*/
+    align-items: center;  /*brings the button in*/
+}
+
+h1 {
+    font-size: 56px; /*Makes text bigger*/
+    margin-bottom: 24px; /*Creates space between h1+h2*/
+    text-align: center; /*Center text in the middle*/
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px; /*creates space between the bottom text and the picture*/
+}
+
+button {
+    cursor: pointer; /*this creates a pointer when you hover over any of the buttons*/
+}
+
+button:active {
+    transform: translateY(1px); /*What this means is, when we click the button it will move  down one pixel, giving the illusion that it is animated when it gets clicked*/
+}
+
+.browse__books--button {
+    background-color: #7A1CAC;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+}
+
+.container {
+    padding: 56px 0; /*parent of section__title, h2 and row - pushes text down so that its not so cramped up with the picture*/ /*-------also increments of 8 pixels at all times in order to make the webpage more visually pleasing.*/
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*HIGHLIGHTS*/
+
+.highlight__wrapper {
+    display: flex; /*this puts all of the highlight together since they are inside the parent of wrapper*/
+}
+
+.highlight {
+    padding: 0 24px; /*Top and bottom is 0 - left and right is 24px, stops from touching the side of the page on other devices also.*/
+    width: calc(100% / 3); /*this makes each .highlight 33% of the width*/
+}
+
+.highlight__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
