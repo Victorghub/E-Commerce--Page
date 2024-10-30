@@ -88,10 +88,17 @@ header {
     height: 100%;  /*↓*/
     display: flex; /*These 3, height, DF, FDC, allows the image to sit nicely in the landing page - it works because Figure and IMG is INSIDE the header.*/
     flex-direction: column; /*↑*/
+    justify-content: space-around; /*this brings  the image straight to the bottom due to flex direction being column*/
 }
 
 h1 {
     font-size: 56px; /*Makes text bigger*/
     margin-bottom: 24px; /*Creates space between h1+h2*/
     text-align: center; /*Center text in the middle*/
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px; /*creates space between the bottom text and the picture*/
 }
