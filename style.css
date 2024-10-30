@@ -102,3 +102,11 @@ h2 {
     font-size: 32px;
     margin-bottom: 32px; /*creates space between the bottom text and the picture*/
 }
+
+.browse__books--button {
+    background-color: #7A1CAC;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+}
