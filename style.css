@@ -21,6 +21,10 @@ img {
     padding: 20px; /*padding top and bottom*/
 }
 
+p {
+    line-height: 1.5;
+}
+
 /**/
 
 /*NAVIGATION SECTION*/
@@ -101,6 +105,11 @@ header {
     align-items: center;  /*brings the button in*/
 }
 
+.header__img--wrapper {
+    padding: 20px;
+    z-index: 2; /*this adds a Z-index higher than the wave - the wave z-index is just 1*/
+}
+
 h1 {
     font-size: 56px; /*Makes text bigger*/
     margin-bottom: 24px; /*Creates space between h1+h2*/
@@ -142,6 +151,38 @@ button:active {
 
 /*HIGHLIGHTS*/
 
+#highlights {
+    position: relative;
+}
+
+#highlights:before { /*this puts things before highlights - so BEFORE highlights ELEMENT. put XYZ*/
+    content: ""; /*even though this is an empty string we need this tag for our pseudo selector*/
+    background: url('assets/wave.svg'); /*This is the image*/
+    position: absolute; /*does not follow flow of page - set width manually*/
+    width: 101vw; /*this makes the height get bigger the bigger the screen gets*/
+    height: 12vw;
+    top: 1px;
+    left: 0;
+    z-index: 1; /*?????*/
+    background-size: cover; /*?????*/
+    background-repeat: no-repeat; /*?????*/
+    transform: translateY(-100%); /*this makes it go on top of image to fix this you go onto .header__img--wrapper*/
+}
+
+#highlights:after { /*this puts things after highlights - so AFTER highlights ELEMENT. put XYZ*/
+    content: ""; 
+    background: url('assets/wave.svg'); 
+    position: absolute; 
+    width: 101vw;
+    height: 12vw;
+    bottom: 1px; /*puts it at the bottom instead of the top*/
+    left: 0;
+    z-index: 1; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    transform: translateY(100%); /*removing the negative pushes the image down to the bottom*/
+}
+
 .highlight__wrapper {
     display: flex; /*this puts all of the highlight together since they are inside the parent of wrapper*/
 }
@@ -149,11 +190,40 @@ button:active {
 .highlight {
     padding: 0 24px; /*Top and bottom is 0 - left and right is 24px, stops from touching the side of the page on other devices also.*/
     width: calc(100% / 3); /*this makes each .highlight 33% of the width*/
+    display: flex; /*puts it side by side*/
+    align-items: center; /*centers y axis*/
+    justify-content: center; /*centers x axis*/
+    flex-direction: column; /*puts it below each other*/
 }
 
-.highlight__img {
+.highlight__para {
+    text-align: center;
+    max-width: 240px;
+}
+
+.highlight__img { /*targets only the image*/
+    border: 2px solid #7a1cac47; /*added transparency*/
+    color: #7A1CAC; /*colors in the symbol itself*/
+    height: 100px; /*hardcode*/
+    width: 100px; /*hardcode*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 32px; /*makes the icon bigger*/
+    margin-bottom: 24px; /*gives space between the border and the text*/
+}
+
+.highlight__subtitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+
+
+/*  .highlight__img {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
+} TO BE REMOVED */
