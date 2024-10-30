@@ -5,7 +5,7 @@
     font-family: "Roboto", sans-serif;
 }
 
-/*Reusable Codes*/
+/*REUSABLE CODES*/
 .purple__text {
     color: #7A1CAC;
 }
@@ -91,6 +91,12 @@ header {
     justify-content: space-around; /*this brings  the image straight to the bottom due to flex direction being column*/
 }
 
+.header__description { /*parent of button*/
+    display: flex; /*puts buttonside by side*/
+    flex-direction: column; /*puts it below the h1 and h2*/
+    align-items: center;  /*brings the button in*/
+}
+
 h1 {
     font-size: 56px; /*Makes text bigger*/
     margin-bottom: 24px; /*Creates space between h1+h2*/
@@ -103,10 +109,33 @@ h2 {
     margin-bottom: 32px; /*creates space between the bottom text and the picture*/
 }
 
+button {
+    cursor: pointer; /*this creates a pointer when you hover over any of the buttons*/
+}
+
+button:active {
+    transform: translateY(1px); /*What this means is, when we click the button it will move  down one pixel, giving the illusion that it is animated when it gets clicked*/
+}
+
 .browse__books--button {
     background-color: #7A1CAC;
     color: white;
     padding: 12px 24px;
     font-size: 20px;
     border-radius: 4px;
+    border: none;
 }
+
+.header__img--wrapper {  /*this gives padding on the outside of the picture just makes it a lil smaller, therefore it doesnt touch the screen when you re-size the  page*/
+    padding: 20px;
+}
+
+.container {
+
+}
+
+.row {
+
+}
+
+/*HIGHLIGHTS*/
