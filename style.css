@@ -14,6 +14,11 @@
     font-size: 45px;
 }
 
+body {
+    max-width: 100vw;
+    overflow-x: hidden; /*stops you from scrolling left to right*/
+}
+
 img {
     width: 100%; /*This puts all images to be 100% of their parent, gives them their width and height*/
     height: 100%; /*makes the height 100% of its relative parent*/
@@ -153,6 +158,7 @@ button:active {
 
 #highlights {
     position: relative;
+    max-width: 100vw;
 }
 
 #highlights:before { /*this puts things before highlights - so BEFORE highlights ELEMENT. put XYZ*/
