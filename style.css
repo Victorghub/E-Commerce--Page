@@ -163,15 +163,9 @@ button:active {
     height: 12vw;
     top: 1px;
     left: 0;
-<<<<<<< HEAD
     z-index: 1; /*Z-index moves things on top of each other*/
     background-size: cover; /*the background will be scaled to cover the entire container even if it means that some parts of the image  migh be cut off. This  ensures that  the image alwyas fills the container completely  without any empty spaces*/
     background-repeat: no-repeat; /*a background  image byy default  isrepeated vertically and horizontally.  But you can change this by using  this command*/
-=======
-    z-index: 1; /*?????*/
-    background-size: cover; /*?????*/
-    background-repeat: no-repeat; /*?????*/
->>>>>>> e924e561f377b3db411d105162a9c227d052bdde
     transform: translateY(-100%); /*this makes it go on top of image to fix this you go onto .header__img--wrapper*/
 }
 
@@ -186,7 +180,7 @@ button:active {
     z-index: 1; 
     background-size: cover; 
     background-repeat: no-repeat; 
-    transform: translateY(100%); /*removing the negative pushes the image down to the bottom*/
+    transform: translateY(100%) rotate(180deg); /*removing the negative pushes the image down to the bottom + rotates imag 180 degrees so waves are ontop*/
 }
 
 .highlight__wrapper {
@@ -225,38 +219,9 @@ button:active {
     margin-bottom: 16px;
 }
 
-<<<<<<< HEAD
-/*FEATURES SECTION*/
+/*Features Secttion*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> e924e561f377b3db411d105162a9c227d052bdde
-
-
-/*  .highlight__img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-<<<<<<< HEAD
-} TO BE REMOVED */
-=======
-} TO BE REMOVED */
->>>>>>> e924e561f377b3db411d105162a9c227d052bdde
+#features {
+    height: 1000px;
+    background-color: rgba(115, 66, 214, 0.1);
+}
