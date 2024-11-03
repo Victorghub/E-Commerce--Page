@@ -1,300 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-/*REUSABLE CODES*/
-.purple__text {
-    color: #7A1CAC;
-}
-
-.h1__Ireland--text {
-    font-size: 45px;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    max-width: 100vw;
-    overflow-x: hidden; /*stops you from scrolling left to right*/
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+nav {
+  height: 80px;
+  display: flex;
 }
 
 img {
-    width: 100%; /*This puts all images to be 100% of their parent, gives them their width and height*/
-    height: 100%; /*makes the height 100% of its relative parent*/
-    max-height: 50vh; /*caps the height to 50% of its height of its relative parent*/
-    padding: 20px; /*padding top and bottom*/
+  width: 100%;
 }
 
 p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
-/**/
-
-/*NAVIGATION SECTION*/
-
-nav {
-    height: 80px;
-    display: flex;
+a {
+  text-decoration: none;
 }
 
-.nav__container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 24px; /*stops the nav from touching the sides*/
-    display: flex; /*allows for the next two settings to take place*/
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto; /*centers container*/
+a:hover {
+  text-decoration: underline;
 }
 
-.logo {
-    width: 160px; /*logo width*/
-}
+
 
 ul {
-    display: flex; /*puts lists side by side, parent of li*/
+  display: flex;
 }
 
 li {
-    list-style-type: none; /*removes bullet points from the list*/
-}
-
-.nav__link {
-    margin-left: 15px; /*creates space between links*/
-    text-decoration: none; /*removes underline*/
-    font-size: 20px; 
-    color: #7A1CAC;
-    font-weight: bold;
-    padding: 8px; /*creates extra space, this is mostly because we add a button, if we remove this the border of "books" will be touching with the letter B and S*/
-}
-
-.nav__link:hover {
-    text-decoration: underline;
-}
-
-.nav__link--books {
-    border: 2px solid #7A1CAC;
-    border-radius: 4px; /*rounds corners*/
-}
-
-.nav__link--books:hover {
-    text-decoration: none;
-}
-
-#nav__bar-top--background {
-    background-color: rgba(115, 66, 214, 0.1);
-}
-
-/*HEADER SECTION*/
-
-header {
-    height: calc(100vh - 80px); /*This fills up the rest of the page from the background-color off #nav__bar-top--background*/
-}
-
-.header__container { /*This maxes width to 100% on the container that holds the text together, its the parent*/
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto; /*centers container*/
-    height: 100%;  /*↓*/
-    display: flex; /*These 3, height, DF, FDC, allows the image to sit nicely in the landing page - it works because Figure and IMG is INSIDE the header.*/
-    flex-direction: column; /*↑*/
-    justify-content: space-around; /*this brings  the image straight to the bottom due to flex direction being column*/
-    padding-top: 24px;
-}
-
-.header__description { /*parent of button*/
-    display: flex; /*puts buttonside by side*/
-    flex-direction: column; /*puts it below the h1 and h2*/
-    align-items: center;  /*brings the button in*/
-}
-
-.header__img--wrapper {
-    padding: 20px;
-    z-index: 2; /*this adds a Z-index higher than the wave - the wave z-index is just 1*/
+  list-style-type: none;
 }
 
 h1 {
-    font-size: 56px; /*Makes text bigger*/
-    margin-bottom: 24px; /*Creates space between h1+h2*/
-    text-align: center; /*Center text in the middle*/
+  font-size: 56px;
+  color: #7342d6;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 32px; /*creates space between the bottom text and the picture*/
+  font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 button {
-    cursor: pointer; /*this creates a pointer when you hover over any of the buttons*/
+  cursor: pointer;
 }
 
 button:active {
-    transform: translateY(1px); /*What this means is, when we click the button it will move  down one pixel, giving the illusion that it is animated when it gets clicked*/
+  transform: translateY(1px);
 }
 
-.browse__books--button {
-    background-color: #7A1CAC;
-    color: white;
-    padding: 12px 24px;
-    font-size: 20px;
-    border-radius: 4px;
-    border: none;
+.btn {
+  background-color: #7342d6;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
+}
+
+.purple {
+  color: #7342d6;
+}
+
+.logo {
+  width: 160px;
+}
+
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav__link {
+  margin-left: 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7342d6;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link--primary {
+  border: 2px solid #7342d6;
+  border-radius: 4px;
+}
+
+.nav__link--primary:hover {
+  text-decoration: none;
+}
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #7342d6;
+  display: none;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 300ms ease;
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  color: white;
+  font-size: 40px;
+}
+
+.btn__menu--close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px;
+  color: white;
+}
+
+
+/* 
+
+LANDING
+
+*/
+
+#landing {
+  background-color: rgba(115, 66, 214, 0.1)
+}
+
+header {
+  height: calc(100vh - 80px);
+}
+
+.header__container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__img--wrapper {
+  padding: 20px;
+
+  /* Added this after the tutorial to 
+  show it over the wave on larger screens */
+  z-index: 50;
 }
 
 .container {
-    padding: 56px 0; /*parent of section__title, h2 and row - pushes text down so that its not so cramped up with the picture*/ /*-------also increments of 8 pixels at all times in order to make the webpage more visually pleasing.*/
+  padding: 56px 0;
 }
 
 .row {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .row__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*HIGHLIGHTS*/
+.no-cursor {
+  cursor: not-allowed;
+}
+/* 
+
+HIGHLIGHTS 
+
+*/
 
 #highlights {
-    position: relative;
-    max-width: 100vw;
+  position: relative;
+  max-width: 100vw;
 }
 
-#highlights:before { /*this puts things before highlights - so BEFORE highlights ELEMENT. put XYZ*/
-    content: ""; /*even though this is an empty string we need this tag for our pseudo selector*/
-    background: url('assets/wave.svg'); /*This is the image*/
-    position: absolute; /*does not follow flow of page - set width manually*/
-    width: 101vw; /*this makes the height get bigger the bigger the screen gets*/
-    height: 12vw;
-    top: 1px;
-    left: 0;
-    z-index: 1; /*Z-index moves things on top of each other*/
-    background-size: cover; /*the background will be scaled to cover the entire container even if it means that some parts of the image  migh be cut off. This  ensures that  the image alwyas fills the container completely  without any empty spaces*/
-    background-repeat: no-repeat; /*a background  image byy default  isrepeated vertically and horizontally.  But you can change this by using  this command*/
-    transform: translateY(-100%); /*this makes it go on top of image to fix this you go onto .header__img--wrapper*/
+#highlights:after,
+#highlights:before {
+  background: url('assets/wave.svg');
+  content: "";
+  position: absolute;
+  width: 101vw;
+  height: 12vw;
+  left: 0;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#highlights:after { /*this puts things after highlights - so AFTER highlights ELEMENT. put XYZ*/
-    content: ""; 
-    background: url('assets/wave.svg'); 
-    position: absolute; 
-    width: 101vw;
-    height: 12vw;
-    bottom: 1px; /*puts it at the bottom instead of the top*/
-    left: 0;
-    z-index: 1; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    transform: translateY(100%) rotate(180deg); /*removing the negative pushes the image down to the bottom + rotates imag 180 degrees so waves are ontop*/
+#highlights:before {
+  transform: translateY(-100%);
+  top: 1px;
+}
+
+#highlights:after {
+  transform: translateY(100%) rotate(180deg);
+  bottom: 1px;
 }
 
 .highlight__wrapper {
-    display: flex; /*this puts all of the highlight together since they are inside the parent of wrapper*/
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
-    padding: 0 24px; /*Top and bottom is 0 - left and right is 24px, stops from touching the side of the page on other devices also.*/
-    width: calc(100% / 3); /*this makes each .highlight 33% of the width*/
-    display: flex; /*puts it side by side*/
-    align-items: center; /*centers y axis*/
-    justify-content: center; /*centers x axis*/
-    flex-direction: column; /*puts it below each other*/
+  padding: 0 24px;
+  width: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .highlight__para {
-    text-align: center;
-    max-width: 240px;
+  text-align: center;
+  max-width: 280px;
 }
 
-.highlight__img { /*targets only the image*/
-    border: 2px solid #7a1cac47; /*added transparency*/
-    color: #7A1CAC; /*colors in the symbol itself*/
-    height: 100px; /*hardcode*/
-    width: 100px; /*hardcode*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    font-size: 32px; /*makes the icon bigger*/
-    margin-bottom: 24px; /*gives space between the border and the text*/
+.highlight__img {
+  border: 2px solid #7342d65d;
+  color: #7342d6;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 32px;
+  margin-bottom: 24px;
 }
 
 .highlight__subtitle {
-    font-size: 20px;
-    margin-bottom: 16px;
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-/*Features Secttion*/
+/* 
+
+FEATURES 
+
+*/
 
 #features {
-    padding-top: 16vw;
-    background-color: rgba(115, 66, 214, 0.1);
+  padding-top: 8vw;
+  background-color: rgba(115, 66, 214, 0.1);
 }
 
 .books {
-   display: flex; /*puts books beside each other*/
-   flex-wrap: wrap; /*puts books under each other since there are more than 3 under the latest section*/
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .book {
-    width: 25%; /*25% of parent*/
-    padding: 24px;
+  width: 25%;
+  padding: 24px;
 }
 
 .book__img {
-    max-height: 380px;
-    transition: all 300ms ease; /*akes the hover effect smoother*/
-    cursor: no-drop; /*stops the person from clicking the book*/
+  max-height: 380px;
+  transition: all 300ms ease;
+  cursor: not-allowed;
 }
 
 .book__img--wrapper {
-    margin-bottom: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex; /*stops the book from coming out*/
-
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
 }
 
 .book:hover .book__img {
-    transform: scale(1.03); /*when hover over book, I want the img to get a lil bigger by 3%*/
+  transform: scale(1.03);
 }
 
 .book__title {
-    font-size: 20px;
-    margin-bottom: 8px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
-.book__title:hover { /*when you hover over the book title*/
-    text-decoration: underline; 
-    cursor: not-allowed; /*same as no drop*/
+.book__title:hover {
+  text-decoration: underline;
+  cursor: not-allowed;
 }
 
 .book__ratings {
-    margin-bottom: 8px;
-    color: #fabf2a;
+  margin-bottom: 8px;
+  color: #fabf2a;
 }
 
 .book__price--normal {
-    text-decoration: line-through; /*line through price for discount*/
-    padding-right: 6px;
-    color: #bfbfbf;
+  text-decoration: line-through;
+  padding-right: 6px;
+  color: #bfbfbf;
 }
 
-/*Latest Books*/
+/* 
 
-.section__title--recent {
-    margin-top: 32px;
-}
+EXPLORE
 
-/*Explore more books*/
+*/
 
 #explore {
-    background-color: rgba(115, 66, 214, 0.1);   
-}       
+  background-color: rgba(115, 66, 214, 0.1);
+}
+
+/* 
+
+FOOTER
+
+*/
+
+footer {
+  background-color: #242424;
+}
+
+.footer__logo {
+  display: flex;
+}
+
+.footer__logo--img {
+  width: 160px;
+  filter: grayscale(1) invert(1);
+}
+
+.footer__link,
+.footer__copyright {
+  color: #fff;
+}
+
+.footer__list {
+  margin: 20px 0 24px 0;
+}
+
+.footer__link {
+  padding: 0 8px;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 50%;
+  }
+}
+
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 550px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .highlight {
+    width: 100%;
+  }
+
+  .highlight:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
