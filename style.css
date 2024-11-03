@@ -228,6 +228,56 @@ button:active {
 /*Features Secttion*/
 
 #features {
-    height: 1000px;
+    padding-top: 16vw;
     background-color: rgba(115, 66, 214, 0.1);
 }
+
+.books {
+   display: flex; /*puts books beside each other*/
+}
+
+.book {
+    width: 25%; /*25% of parent*/
+    padding: 24px;
+}
+
+.book__img {
+    max-height: 380px;
+    transition: all 300ms ease; /*akes the hover effect smoother*/
+    cursor: no-drop; /*stops the person from clicking the book*/
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex; /*stops the book from coming out*/
+
+}
+
+.book:hover .book__img {
+    transform: scale(1.03); /*when hover over book, I want the img to get a lil bigger by 3%*/
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover { /*when you hover over the book title*/
+    text-decoration: underline; 
+    cursor: not-allowed; /*same as no drop*/
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through; /*line through price for discount*/
+    padding-right: 6px;
+    color: #bfbfbf;
+}
+
+/*Latest Books*/
